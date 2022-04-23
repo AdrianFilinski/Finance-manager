@@ -61,6 +61,19 @@ h2.title {
     text-align: center;
 }
 
-.transactions-list {
+.transaction-list {
     display: flex;
+}
+
+.income-area,
+.expenses-area {
+    margin: 0 20px;
+    padding: 30px;
+    width: 50%;
+    border: 1px solid var(--border-color);
+}
+
+.income-area h3, .income-area .transactions-amount {
+    color: rgb(19, 200, 108);
+    font-weight: bold;
 }
