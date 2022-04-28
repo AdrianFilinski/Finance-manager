@@ -1,6 +1,7 @@
 const incomeSection = document.querySelector('.income-area');
 const expensesArea = document.querySelector('.expenses-area');
 const availableMoney = document.querySelector('.available-money');
+const addTransactionPanel = document.querySelector('.add-transaction-panel');
 
 const nameInput = document.querySelector('#name');
 const amountInput = document.querySelector('#amount');
@@ -20,3 +21,7 @@ let ID = 0;
 let categoryIcon;
 let selectedCategory;
 let moneyArr = [0];
+
+const showPanel = () => {
+    addTransactionPanel.style.display = 'flex';
+}
