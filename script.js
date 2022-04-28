@@ -25,3 +25,5 @@ let moneyArr = [0];
 const showPanel = () => {
     addTransactionPanel.style.display = 'flex';
 }
+
+addTransactionBtn.addEventListener('click', showPanel)
