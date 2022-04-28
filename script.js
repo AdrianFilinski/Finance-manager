@@ -29,5 +29,14 @@ const closePanel = () => {
     addTransactionPanel.style.display = 'none';
 }
 
-addTransactionBtn.addEventListener('click', showPanel)
-cancelBtn.addEventListener('click', closePanel)
+const checkForm = () => {
+    if (nameInput.value !== '' && amountInput.value !== '' && categorySelect.value !== 'none') {
+        console.log('Perfect')
+    } else {
+        alert('Fill in all fields!')
+    }
+}
+
+addTransactionBtn.addEventListener('click', showPanel);
+cancelBtn.addEventListener('click', closePanel);
+saveBtn.addEventListener('click', checkForm)
