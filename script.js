@@ -35,8 +35,16 @@ const checkForm = () => {
     } else {
         alert('Fill in all fields!')
     }
+
+}
+
+const clearInputsValue = () => {
+    nameInput.value = '';
+    amountInput.value = '';
+    categorySelect.selectIndex = 0;
 }
 
 addTransactionBtn.addEventListener('click', showPanel);
 cancelBtn.addEventListener('click', closePanel);
+cancelBtn.addEventListener('click', clearInputsValue);
 saveBtn.addEventListener('click', checkForm)
