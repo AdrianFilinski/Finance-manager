@@ -44,6 +44,20 @@ const clearInputsValue = () => {
     categorySelect.selectIndex = 0;
 }
 
+const createNewTransaction = () => {
+    const newTransaction = document.createElement('div');
+    newTransaction.classList.add('transaction');
+    newTransaction.setAttribute('id', ID);
+
+    newTransaction.innerHTML = `
+    <p class="transaction-name">${categoryIcon} ${nameInput.value}</p>
+    <p class="transaction-amount">${amountInput.value}
+    <button class="delete"><i
+                class="fas fa-times"></i></button>
+    </p>
+    `
+}
+
 addTransactionBtn.addEventListener('click', showPanel);
 cancelBtn.addEventListener('click', closePanel);
 cancelBtn.addEventListener('click', clearInputsValue);
