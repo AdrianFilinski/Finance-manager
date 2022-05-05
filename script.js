@@ -63,6 +63,23 @@ const createNewTransaction = () => {
     clearInputsValue();
 }
 
+const checkCategory = transaction => {
+    switch (transaction) {
+        case '[ + ] Income':
+            categoryIcon = '<i class="fas fa-money-bill-wave"></i>'
+            break;
+        case '[ -  ] Shooping':
+            categoryIcon = '<i class="fas fa-cart-arrow-down"></i>'
+            break;
+        case '[ - ] Food':
+            categoryIcon = '<i class="fas fa-hamburger"></i>'
+            break;
+        case '[ - ] Recreaction':
+            categoryIcon = '<i class="fas fa-times"></i>'
+            break;
+    }
+}
+
 addTransactionBtn.addEventListener('click', showPanel);
 cancelBtn.addEventListener('click', closePanel);
 cancelBtn.addEventListener('click', clearInputsValue);
