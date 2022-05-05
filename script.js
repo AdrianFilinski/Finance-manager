@@ -31,7 +31,7 @@ const closePanel = () => {
 
 const checkForm = () => {
     if (nameInput.value !== '' && amountInput.value !== '' && categorySelect.value !== 'none') {
-        console.log('Perfect')
+        createNewTransaction();
     } else {
         alert('Fill in all fields!')
     }
@@ -49,10 +49,12 @@ const createNewTransaction = () => {
     newTransaction.classList.add('transaction');
     newTransaction.setAttribute('id', ID);
 
+    checkCategory(selectedCategory);
+
     newTransaction.innerHTML = `
     <p class="transaction-name">${categoryIcon} ${nameInput.value}</p>
     <p class="transaction-amount">${amountInput.value}
-    <button class="delete"><i
+    <button class="delete" onclick="deleteTransaction(${ID})"><i
                 class="fas fa-times"></i></button>
     </p>
     `
@@ -62,6 +64,9 @@ const createNewTransaction = () => {
     ID++;
     clearInputsValue();
 }
+const selectCategory = () => {
+    selectedCategory = categorySelect.options[categorySelect.selectedIndex].text;
+}
 
 const checkCategory = transaction => {
     switch (transaction) {
@@ -69,7 +74,7 @@ const checkCategory = transaction => {
             categoryIcon = '<i class="fas fa-money-bill-wave"></i>'
             break;
         case '[ -  ] Shooping':
-            categoryIcon = '<i class="fas fa-cart-arrow-down"></i>'
+            categoryIcon = '<i class="fa-solid fa-cart-shopping"></i>'
             break;
         case '[ - ] Food':
             categoryIcon = '<i class="fas fa-hamburger"></i>'
