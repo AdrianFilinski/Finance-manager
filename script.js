@@ -56,6 +56,11 @@ const createNewTransaction = () => {
                 class="fas fa-times"></i></button>
     </p>
     `
+    amountInput.value > 0 ? incomeSection.appendChild(newTransaction) && newTransaction.classList.add('income') : expensesArea.appendChild(newTransaction) && newTransaction.classList.add('expense');
+    moneyArr.push(parseFloat(amountInput.value))
+    closePanel();
+    ID++;
+    clearInputsValue();
 }
 
 addTransactionBtn.addEventListener('click', showPanel);
