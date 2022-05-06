@@ -84,7 +84,9 @@ const checkCategory = transaction => {
             break;
     }
 }
+const countMoney = money => {
 
+}
 addTransactionBtn.addEventListener('click', showPanel);
 cancelBtn.addEventListener('click', closePanel);
 cancelBtn.addEventListener('click', clearInputsValue);
