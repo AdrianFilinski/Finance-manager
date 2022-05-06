@@ -60,6 +60,7 @@ const createNewTransaction = () => {
     `
     amountInput.value > 0 ? incomeSection.appendChild(newTransaction) && newTransaction.classList.add('income') : expensesArea.appendChild(newTransaction) && newTransaction.classList.add('expense');
     moneyArr.push(parseFloat(amountInput.value))
+    countMoney(moneyArr)
     closePanel();
     ID++;
     clearInputsValue();
@@ -85,7 +86,8 @@ const checkCategory = transaction => {
     }
 }
 const countMoney = money => {
-
+    const newMoney = money.reduce((a, b) => a + b);
+    availableMoney.textContent = `${newMoney}zł`
 }
 addTransactionBtn.addEventListener('click', showPanel);
 cancelBtn.addEventListener('click', closePanel);
