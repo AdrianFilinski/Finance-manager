@@ -105,6 +105,7 @@ const deleteAllTransaction = () => {
     incomeSection.innerHTML = `<h3>Profit</h3>`;
     expensesArea.innerHTML = `<h3>Expenses</h3>`;
     availableMoney.textContent = '0zł';
+    moneyArr = [0];
 
 }
 addTransactionBtn.addEventListener('click', showPanel);
