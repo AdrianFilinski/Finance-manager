@@ -100,7 +100,15 @@ const deleteTransaction = id => {
 
     countMoney(moneyArr);
 }
+
+const deleteAllTransaction = () => {
+    incomeSection.innerHTML = `<h3>Profit</h3>`;
+    expensesArea.innerHTML = `<h3>Expenses</h3>`;
+    availableMoney.textContent = '0zł';
+
+}
 addTransactionBtn.addEventListener('click', showPanel);
 cancelBtn.addEventListener('click', closePanel);
 cancelBtn.addEventListener('click', clearInputsValue);
-saveBtn.addEventListener('click', checkForm)
+saveBtn.addEventListener('click', checkForm);
+deleteAllBtn.addEventListener('click', deleteAllTransaction);
