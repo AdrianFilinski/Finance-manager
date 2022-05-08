@@ -94,6 +94,11 @@ const deleteTransaction = id => {
     const transactionToDelete = document.getElementById(id);
     const transactionAmount = parseFloat(transactionToDelete.childNodes[3].innerText);
     const indexOfTransaction = moneyArr.indexOf(transactionAmount);
+
+    moneyArr.splice(indexOfTransaction, 1);
+    transactionToDelete.classList.contains('income') ? incomeSection.removeChild(transactionToDelete) : expensesArea.removeChild(transactionToDelete);
+
+    countMoney(moneyArr);
 }
 addTransactionBtn.addEventListener('click', showPanel);
 cancelBtn.addEventListener('click', closePanel);
