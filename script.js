@@ -115,8 +115,11 @@ const changeStyleToLight = () => {
     root.style.setProperty('--border-color', 'rgba(0, 0, 0, .2)');
 
 }
-
-
+const changeStyleToDark = () => {
+    root.style.setProperty('--first-color', '#14161F');
+    root.style.setProperty('--second-color', '#F9F9F9');
+    root.style.setProperty('--border-color', 'rgba(255, 255, 255, .4)');
+}
 addTransactionBtn.addEventListener('click', showPanel);
 cancelBtn.addEventListener('click', closePanel);
 cancelBtn.addEventListener('click', clearInputsValue);
