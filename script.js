@@ -125,3 +125,5 @@ cancelBtn.addEventListener('click', closePanel);
 cancelBtn.addEventListener('click', clearInputsValue);
 saveBtn.addEventListener('click', checkForm);
 deleteAllBtn.addEventListener('click', deleteAllTransaction);
+lightStyleBtn.addEventListener('click', changeStyleToLight);
+darkStyleBtn.addEventListener('click', changeStyleToDark);
